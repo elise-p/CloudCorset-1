@@ -1,6 +1,6 @@
 # Welcome to **Cloud Corset** ☁️👗
 
-[Visit the App Here](http://cloudcorset.s3-website-us-east-1.amazonaws.com/)
+Visit the website here: http://cloudcorset.s3-website-us-east-1.amazonaws.com/ 
 
 Cloud Corset is an application where you can get daily notifications on what to wear based on today's weather.  
 Right now, you can choose from 5 cities depending on where you live (I plan to expand this later).  
