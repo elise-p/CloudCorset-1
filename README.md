@@ -29,9 +29,8 @@ In the future, I plan to migrate everything to Terraform for full infrastructure
 ## Things I Learned
 
 - At first, I tried using DynamoDB `getItem` or `scan`, but realized they aren't good for retrieving multiple grouped users.  
-  I had to hardcode city grouping logic inside the Lambda to make it work.
-- In the future, once the app expands to more cities, I plan to optimize it by grouping cities with the same timezone.  
-  That way, I can minimize how often EventBridge and Lambda need to run.
+  I had to do the DynamoDB query manually inside the Lambda to make it work.
+- To avoid creating a separate EventBridge rule for each city (which doesn’t scale well), I switched to using a single hourly EventBridge ping. This way, even as the app grows, the maximum number of pings per day stays at 24.
 
 ---
 
